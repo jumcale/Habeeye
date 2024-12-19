@@ -1,0 +1,502 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+        <header>
+        <div class="logo">
+            <h1>Habeeye</h1>
+        </div>
+        <nav>
+        </nav>
+        <div class="search-cart">
+            <input type="text" placeholder="Search...">
+            <div class="cart-icon">🛒</div>
+                    <div class="menu-toggle">&#9776;</div>
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="overlay"></div>
+            </div>
+        </div>
+    </header>
+<body>
+    <!-- Menu Toggle and Links -->
+    <header class="header">
+
+    </header>
+</body>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Build Your Dream Shopify Store</h1>
+        <p>Custom Shopify solutions for e-commerce success</p>
+        <a href="#portfolio" class="cta-button">View Portfolio</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>My Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <h3>Store Setup</h3>
+                <p>Complete Shopify store setup for new businesses.</p>
+            </div>
+            <div class="service-card">
+                <h3>Theme Customization</h3>
+                <p>Tailored designs to fit your brand's identity.</p>
+            </div>
+            <div class="service-card">
+                <h3>Dropshipping</h3>
+                <p>Integrate with suppliers for seamless dropshipping.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2>My Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvlKgaZ0jE7JsjIbXPK0fEwivzj_JktWftkw&s" alt="Store 1">
+                <p>Online Fashion Store</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://ecomheroes.dev/cdn/shop/products/Complete-Shopify-Website-Store-Creation-Package-Ecomheroes.png?v=1677055331" alt="Store 2">
+                <p>Electronics Store</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://cdn.shopify.com/s/files/1/0070/7032/files/image4_3309f33d-f71f-4997-ad24-ad70982f6bb4_600x600.png?v=1695306752" alt="Store 3">
+                <p>Fitness Gear Store</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I'm a Shopify expert with a passion for building e-commerce solutions that drive success. With years of experience in design, development, and optimization, I deliver top-quality stores tailored to your needs.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Jimcale, All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+<style>/* Header Styles */
+header {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Search and Cart Styles */
+.search-cart {
+    display: flex;
+    align-items: center;
+}
+
+.search-cart input {
+    padding: 8px;
+    margin-right: 8px;
+    border: 2px solid #6a11cb;
+    border-radius: 5px;
+}
+
+.search-cart input:focus {
+    border-color: #2575fc;
+}
+.menu-toggle {
+        display: flex;
+    align-items: center;
+    padding: 8px;
+    margin-right: 8px;
+    border-radius: 5px;
+    }
+/* Initial hidden menu */
+.menu {
+    display: none;
+    list-style: none;
+    padding: 1rem;
+    background: #111;
+    position: absolute;
+    top: 50px; /* Position below the toggle button */
+    right: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Show menu when active */
+.menu.active {
+    display: block;
+}
+
+/* Menu links */
+.menu li {
+    margin: 0.5rem 0;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    background: #f4c542;
+    color: #111;
+}
+
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background: #111;
+    color: #fff;
+    padding: 1rem 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f4c542;
+    transition: color 0.3s;
+}
+.navbar .logo:hover {
+    color: #ff4d4d;
+}
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+.navbar .menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    transition: color 0.3s;
+}
+.navbar .menu a:hover {
+    color: #f4c542;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+/* When menu is active, slide into view */
+.menu.active {
+    right: 0;
+}
+
+
+/* Hero Section */
+.hero {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ff4d4d;
+    transition: color 0.3s;
+}
+.hero h1:hover {
+    color: #f4c542;
+}
+.hero .cta-button {
+    background: #28a745;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+/* Services Section */
+.services {
+    background: #f9f9f9;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 2rem;
+    color: #f4c542; /* Attractive title color */
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.service-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%; /* This makes each card flexible, allowing it to take up 30% of the space */
+    max-width: 350px; /* Prevent the cards from getting too wide */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Mobile-friendly: Stack the service cards vertically on smaller screens */
+@media (max-width: 768px) {
+    .service-cards {
+        justify-content: center; /* Center the cards when stacked */
+    }
+
+    .service-card {
+        flex: 1 1 100%; /* Make the cards take full width on smaller screens */
+        max-width: none; /* Remove max-width on smaller screens */
+    }
+}
+
+
+/* Portfolio Section */
+.portfolio {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+.portfolio h2 {
+    margin-bottom: 2rem;
+    color: #f4c542;
+}
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+.portfolio-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* About Section */
+.about {
+    padding: 3rem 2rem;
+    background: #f0f0f0;
+    text-align: center;
+}
+
+/* Contact Section */
+.contact {
+    padding: 3rem 2rem;
+    background: #222;
+    color: #fff;
+    text-align: center;
+}
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.contact form input, .contact form textarea, .contact form button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+}
+.contact form button {
+    background: #28a745;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #111;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        padding: 1rem;
+    }
+    .menu.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+/* Partial Screen Menu Styles */
+.menu {
+    display: solid;
+    position: fixed;
+    top: 50%; /* Center vertically */
+    right: -60%; /* Slide off-screen to the right initially */
+    width: 50%; /* Menu covers 60% of the screen width */
+    height: 100vh; /* Adjust height to content */
+    background: rgba(0, 0, 0, 0.9); /* Dark overlay */
+    list-style: none;
+    padding: 2rem;
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align links to the left */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    border-radius: 10px 0 0 10px; /* Rounded corners for a polished look */
+    transition: right 0.3s ease-in-out; /* Smooth slide-in transition */
+}
+
+/* Show the menu when active */
+.menu.active {
+    display: flex;
+    right: 0; /* Slide into view from the right */
+}
+
+/* Menu Links */
+.menu li {
+    margin: 1.5rem 0;
+}
+
+.menu a {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #f4c542;
+}
+
+/* Prevent Body Scroll */
+body.menu-open {
+    overflow: hidden; /* Disable scrolling */
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1100; /* Keep toggle above the menu */
+    position: relative;
+}
+
+/* Mobile-friendly Menu Adjustments */
+@media (max-width: 768px) {
+    .menu {
+        width: 80%; /* Use more screen space on smaller devices */
+    }
+}
+/* Prevent body scroll when the menu is open */
+body.menu-open {
+    overflow: hidden; /* Disables scrolling on the body */
+}
+</style><script>// Smooth Scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Menu toggle functionality
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+// Add click event to menu toggle
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active'); // Toggle the active class to slide the menu in/out
+    document.body.classList.toggle('menu-open'); // Disable body scrolling when menu is open
+});
+
+// Optional: Close the menu when a link is clicked
+menu.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+        menu.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    }
+});
+</script>
